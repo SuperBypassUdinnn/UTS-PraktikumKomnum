@@ -1,8 +1,8 @@
 import package
 
 def main():
-    a = int(input("Masukkan batas bawah (a): "))
-    b = int(input("Masukkan batas atas (b): "))    
+    a = float(input("Masukkan batas bawah (a): "))
+    b = float(input("Masukkan batas atas (b): "))    
     e = float(input("Masukkan toleransi (e): "))
     n = int(input("Masukkan jumlah iterasi maksimum (n): "))
     fungsi = input("Masukkan fungsi F(x) dengan variabel x: ")  
