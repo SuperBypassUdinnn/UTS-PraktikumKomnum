@@ -1,6 +1,5 @@
 from package.parsexpr import parse_expr
 
-
 def regula_falsi(a, b, e, n, fungsi):
     # Fungsi F(x)
     fungsi = parse_expr(fungsi)
