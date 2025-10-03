@@ -1,37 +1,15 @@
-import numpy as np
-import math
-from tabulate import tabulate
+import package
 
-# ANSI escape code untuk warna
-YELLOW = "\033[43m"
-RESET = "\033[0m"
+def main():
+    a = int(input("Masukkan batas bawah (a): "))
+    b = int(input("Masukkan batas atas (b): "))    
+    e = float(input("Masukkan toleransi (e): "))
+    n = int(input("Masukkan jumlah iterasi maksimum (n): "))
+    fungsi = input("Masukkan fungsi F(x) dengan variabel x: ")  
+    
+    (hasil, data) = package.regula_falsi(a, b, e, n, fungsi) 
 
-"""
-Fungsi untuk menampilkan data dalam format tabel dengan penyorotan pada baris tertentu.
-Args:
-    data (dict): Dictionary dengan kunci sebagai nama kolom dan nilai sebagai list data.
-    highlight_row (str): Nama kolom yang ingin disorot.
-    highlight (float): Nilai yang ingin disorot dalam kolom tersebut.
-"""
-def tabel(data: dict, highlight_row: str, highlight: float) -> None:
-    # Panjang maksimal list
-    panjang = max(len(v) for v in data.values())
-    
-    # Susun baris-baris tabel
-    rows = []
-    for i in range(panjang):
-        row = []
-        for key in data.keys():
-            if i < len(data[key]):
-                val = data[key][i]
-                # Cek apakah nilai cocok dengan highlight dan berada di kolom yang ditentukan
-                if key == highlight_row and isinstance(val, (float, int)) and val == highlight:
-                    row.append(f"{YELLOW}{val}{RESET}")
-                else:
-                    row.append(val)
-            else:
-                row.append("")  # kosong jika list tidak sama panjang
-        rows.append(row)
-    
-    # Tampilkan tabel dengan garis
-    print(tabulate(rows, headers=list(data.keys()), tablefmt="grid"))
+    package.tabel(data, highlight_row="xr", highlight=hasil)
+
+if __name__ == "__main__":
+    main()
