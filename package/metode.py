@@ -47,18 +47,17 @@ def regula_falsi(a, b, e, n, fungsi):
             FaList.append(Fa)
             FbList.append(Fb)
             FxrList.append(Fxr) 
+            FaFxrList.append(FaFxr)
             mutlakFxrList.append(mutlakFxr)
 
             if FaFxr < 0 :
                 # Mengecek toleransi
-                FaFxrList.append(FaFxr)
                 if mutlakFxr < e :
                     hasil = xr
                     break
                 b = xr
             elif FaFxr > 0 :
                 # Mengecek toleransi
-                FaFxrList.append(FaFxr)
                 if mutlakFxr < e :
                     hasil = xr
                     break
