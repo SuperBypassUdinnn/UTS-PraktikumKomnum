@@ -1,8 +1,9 @@
 try:
     from tabulate import tabulate
 except ImportError:
-    raise ImportError("Please install the 'tabulate' package: pip install tabulate")
-
+    import os
+    os.system("pip install tabulate")
+    from tabulate import tabulate
 # ANSI escape codes
 YELLOW = "\033[33m"  # Yellow text
 CYAN   = "\033[36m"

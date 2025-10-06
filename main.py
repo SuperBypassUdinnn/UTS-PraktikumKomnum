@@ -1,6 +1,9 @@
 import package
 import os
 
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def print_banner():
     banner = [
         "╔" + "═" * 32 + "╗",
@@ -9,15 +12,14 @@ def print_banner():
     ]
     for line in banner:
         print(line)
-    print("\nPress Enter to start")
+    print("\nPress anykey to start")
 
 def main():
+    clear_terminal()
     print_banner()
-    input()  # Wait for user to press Enter
-
-    # Clear screen (Windows)
-    os.system('cls')
-
+    input()  # Wait for user to press any key
+    clear_terminal()
+    
     a      = float(input("Masukkan batas bawah (a)              : "))
     b      = float(input("Masukkan batas atas (b)               : "))    
     e      = float(input("Masukkan toleransi (e)                : "))
