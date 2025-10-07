@@ -4,10 +4,10 @@ import os
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def print_banner():
+def print_banner(title):
     banner = [
         "╔" + "═" * 32 + "╗",
-        "║{:^32}║".format("METODE REGULA FALSI"),
+        "║{:^32}║".format(title),
         "╚" + "═" * 32 + "╝"
     ]
     for line in banner:
@@ -16,7 +16,7 @@ def print_banner():
 
 def main():
     clear_terminal()
-    print_banner()
+    print_banner("METODE REGULA FALSI")
     input()  # Wait for user to press any key
     clear_terminal()
     
