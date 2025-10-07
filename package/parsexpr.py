@@ -8,6 +8,7 @@ except ImportError:
 
 def parse_expr(expr_input):
     expr_input = expr_input.lower()
+    expr_input = re.sub(r'(\d)(x)', r'\1*\2', expr_input)
 
     # Cek karakter legal
     if not re.fullmatch(r"[0-9x+\-*/^().\s]*", expr_input):
