@@ -12,13 +12,15 @@ def print_banner(title):
     ]
     for line in banner:
         print(line)
-    print("\nPress anykey to start")
 
 def main():
     clear_terminal()
     print_banner("METODE REGULA FALSI")
+    print("\nPress anykey to start")
     input()  # Wait for user to press any key
     clear_terminal()
+    print_banner("METODE REGULA FALSI")
+    print("")
     
     a      = float(input("Masukkan batas bawah (a)              : "))
     b      = float(input("Masukkan batas atas (b)               : "))    
