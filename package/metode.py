@@ -1,10 +1,10 @@
 from package.parsexpr import parse_expr
 
 def regula_falsi(a, b, e, n, fungsi):
-    # Fungsi F(x)
+    #Fungsi F(x)
     fungsi = parse_expr(fungsi)
     def F(x, expr):
-        return float(expr.subs('x', x))
+        return float(expr.subs('x', x ))
     
     # List F(a), F(b), F(xr)
     iterasiList = []
