@@ -1,3 +1,4 @@
+#import fungsi
 from package.parsexpr import parse_expr
 
 def regula_falsi(a, b, e, n, fungsi):
@@ -16,9 +17,11 @@ def regula_falsi(a, b, e, n, fungsi):
     FxrList = []
     FaFxrList = []
     mutlakFxrList = []
-
+    
+    #inisialisasi nilai xr
     xr = 0
-    hasil = 0
+    #inisialisasi hasil akhir
+    hasil = 0     
 
     if n <= 0 :
         raise ValueError("Jumlah iterasi harus lebih dari 0")
